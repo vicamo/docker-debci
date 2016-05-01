@@ -7,3 +7,7 @@ RUN apt-get update \
 		debci-collector \
 	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/*_dists_*
+
+WORKDIR /usr/share/debci
+USER debci
+CMD ["/usr/share/debci/bin/debci", "collector"]
