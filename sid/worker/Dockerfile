@@ -1,4 +1,4 @@
-FROM vicamo/debci:sid
+FROM vicamo/debci-base:sid
 
 MAINTAINER You-Sheng Yang <vicamo@gmail.com> (@vicamo)
 

@@ -1,4 +1,4 @@
-FROM vicamo/debci:stretch
+FROM vicamo/debci-base:stretch
 
 MAINTAINER You-Sheng Yang <vicamo@gmail.com> (@vicamo)
 
