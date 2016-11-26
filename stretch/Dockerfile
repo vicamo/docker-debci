@@ -10,7 +10,11 @@ RUN apt-get update \
 
 RUN wget -O /usr/local/bin/dumb-init \
 		https://github.com/Yelp/dumb-init/releases/download/v1.2.0/dumb-init_1.2.0_amd64 \
-	&& chmod +x /usr/local/bin/dumb-init
+	&& wget -O /usr/local/bin/wait-for-it.sh \
+		https://raw.githubusercontent.com/vishnubob/wait-for-it/master/wait-for-it.sh \
+	&& chmod +x \
+		/usr/local/bin/dumb-init \
+		/usr/local/bin/wait-for-it.sh
 
 # Runs "/usr/local/bin/dumb-init -- /bin/foo"
 ENTRYPOINT ["/usr/local/bin/dumb-init", "--"]
